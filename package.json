@@ -1,0 +1,42 @@
+{
+  "name": "vericred",
+  "version": "1.0.0",
+  "description": "VERICRED: Verify Without Revealing - Web3 Decentralized Academic Credentials with Zero-Knowledge Selective Disclosure",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "chain": "node scripts/hardhat.cjs node --hostname 127.0.0.1",
+    "compile:contracts": "node scripts/hardhat.cjs compile",
+    "deploy:local": "node scripts/hardhat.cjs compile && node scripts/deploy-local.cjs",
+    "deploy:sepolia": "node scripts/hardhat.cjs compile --network sepolia && node scripts/deploy-local.cjs",
+    "start:local": "node scripts/start-local.cjs",
+    "api": "node server/index.cjs"
+  },
+  "keywords": [
+    "web3",
+    "blockchain",
+    "zero-knowledge-proof",
+    "verifiable-credentials",
+    "zkp",
+    "ethereum",
+    "hackathon"
+  ],
+  "author": "FET'S LUCK (Atreya Nandy, Soumallya Naskar, Raj Barman, Smarto Mukherjee)",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^6.4.6",
+    "hardhat": "2.29.2",
+    "solc": "0.8.26"
+  },
+  "dependencies": {
+    "ethers": "^6.17.0",
+    "@noble/curves": "^1.8.2",
+    "@noble/hashes": "^1.7.2",
+    "qrcode": "^1.5.4",
+    "pdfjs-dist": "^4.10.38",
+    "tesseract.js": "^6.0.1"
+  }
+}
